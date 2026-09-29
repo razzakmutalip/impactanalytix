@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Impact Analytix Sdn Bhd | Legal and financial technology, Kuala Lumpur</title>
+<meta name="description" content="Impact Analytix builds FindLawyer.my, AsetKoo and AkadSewa, and runs the Islamic Finance Legal Documentation Series in Kuala Lumpur.">
+<meta property="og:title" content="Impact Analytix Sdn Bhd">
+<meta property="og:description" content="Legal and financial tools, built in Malaysia. Products, Islamic finance training and compliance advisory.">
+<meta property="og:image" content="https://impactanalytix.my/images/training-foundation.jpg">
+<meta property="og:url" content="https://impactanalytix.my">
+<link rel="icon" href="images/logo-impact-analytix.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#07152A;
+  --navy-2:#0D2340;
+  --ink:#1D1D1F;
+  --grey:#6E6E73;
+  --light:#F5F5F7;
+  --white:#FFFFFF;
+  --line:#D2D2D7;
+  --cyan:#2BB5E8;
+  --blue:#0071E3;
+  --lime:#A6D12E;
+  --gold:#E8B04A;
+  --fl:#1B7FA6;
+  --ak:#1F4E8C;
+  --as:#7A3FC0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--white);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.center{text-align:center}
+h1,h2,h3{letter-spacing:-.025em;line-height:1.07}
+.link{color:var(--blue);text-decoration:none;font-weight:500}
+.link:hover{text-decoration:underline}
+.dark .link{color:var(--cyan)}
+.pill{display:inline-flex;align-items:center;justify-content:center;padding:11px 22px;border-radius:980px;background:var(--blue);color:#fff;font-weight:600;font-size:16px;text-decoration:none;border:0;transition:filter .15s}
+.pill:hover{filter:brightness(1.1)}
+.pill.ghost{background:transparent;color:var(--blue);box-shadow:inset 0 0 0 1.5px var(--blue)}
+.dark .pill.ghost{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7)}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:28px}
+
+/* Nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(29,29,31,.86);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav img{height:30px;width:auto}
+.nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+.nav ul a{color:rgba(255,255,255,.82);text-decoration:none;font-size:14px;font-weight:500}
+.nav ul a:hover{color:#fff}
+.nav .pill{padding:7px 16px;font-size:14px}
+
+/* Hero (Apple-style: light, big title, device lineup) */
+.hero{background:var(--light);color:var(--ink);padding:64px 0 0;overflow:hidden}
+.hero h1{font-size:clamp(48px,7.6vw,96px);font-weight:800;letter-spacing:-.035em}
+.hero .tag{margin-top:8px;font-size:clamp(26px,3.4vw,40px);font-weight:600;letter-spacing:-.02em}
+.hero .sub{margin:14px auto 0;font-size:clamp(18px,2vw,22px);color:var(--grey);max-width:40ch}
+.hero .ctas{margin-top:26px}
+.hero .pill{padding:13px 26px;font-size:17px}
+
+.lineup{container-type:inline-size;position:relative;max-width:1060px;margin:56px auto 0;aspect-ratio:1060/560;text-align:left}
+.lineup::before{content:"";position:absolute;left:10%;right:10%;top:8%;bottom:-10%;background:radial-gradient(closest-side,rgba(43,181,232,.35),rgba(166,209,46,.18) 55%,transparent);filter:blur(4cqw);z-index:0}
+.dev{position:absolute;bottom:0;filter:drop-shadow(0 2.4cqw 3cqw rgba(0,0,0,.28))}
+.scr{position:relative;background:#fff;overflow:hidden}
+.scr .snap{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;z-index:5}
+.laptop{left:17%;width:66%;z-index:1}
+.laptop .lid{background:#161618;border-radius:1.6cqw 1.6cqw 0 0;padding:1.1cqw 1.1cqw 1.5cqw}
+.laptop .scr{aspect-ratio:16/10;border-radius:.3cqw}
+.laptop .base{position:relative;height:1.7cqw;margin:0 -5%;background:linear-gradient(#EDEEF0,#B4B6BA);border-radius:0 0 2cqw 2cqw}
+.laptop .base::before{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:13%;height:45%;background:#A3A5A9;border-radius:0 0 .8cqw .8cqw}
+.tablet{left:1%;width:27%;z-index:2}
+.tablet .body{background:#161618;border-radius:2.4cqw;padding:1cqw}
+.tablet .scr{aspect-ratio:3/4;border-radius:1.5cqw}
+.phone-d{right:3%;width:17%;z-index:3}
+.phone-d .body{position:relative;background:#161618;border-radius:3.2cqw;padding:.75cqw}
+.phone-d .scr{aspect-ratio:9/19.5;border-radius:2.6cqw}
+.phone-d .isl{position:absolute;top:1.6cqw;left:50%;transform:translateX(-50%);width:32%;height:1.9cqw;border-radius:1cqw;background:#161618;z-index:6}
+
+/* Screen contents, sized in container units so they scale with the lineup */
+.s-bar{display:flex;align-items:center;gap:.5cqw;padding:.8cqw 1cqw;background:#EDEDF0}
+.s-bar i{width:.8cqw;height:.8cqw;border-radius:50%;background:#FF5F57}
+.s-bar i:nth-child(2){background:#FEBC2E}.s-bar i:nth-child(3){background:#28C840}
+.s-bar span{margin-left:1cqw;background:#fff;border-radius:.4cqw;font-size:.9cqw;color:#777;padding:.2cqw .8cqw;width:28%}
+.s-fl-hero{background:linear-gradient(135deg,#0B6E4F,#15A374);color:#fff;padding:2.2cqw 2.4cqw 2.4cqw}
+.s-fl-hero b{display:block;font-size:2.3cqw;letter-spacing:-.02em;line-height:1.1}
+.s-fl-hero small{display:block;font-size:1cqw;opacity:.85;margin-top:.4cqw}
+.s-search{display:flex;gap:.6cqw;margin-top:1.3cqw}
+.s-search div{flex:1;background:#fff;border-radius:.6cqw;height:2.6cqw;font-size:.95cqw;color:#7a8a84;display:flex;align-items:center;padding:0 1cqw}
+.s-search span{background:#0A2F22;border-radius:.6cqw;font-size:.95cqw;font-weight:700;padding:0 1.4cqw;display:flex;align-items:center}
+.s-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1cqw;padding:1.6cqw 2.4cqw}
+.s-card{border:1px solid #E6ECE9;border-radius:.8cqw;padding:1.1cqw}
+.s-card .av{width:3cqw;height:3cqw;border-radius:50%;background:linear-gradient(135deg,#BFE3D5,#5FB892)}
+.s-card b{display:block;height:.8cqw;width:70%;background:#D9E2DE;border-radius:.4cqw;margin:1cqw 0 .6cqw}
+.s-card em{display:block;height:.6cqw;width:90%;background:#EEF2F0;border-radius:.3cqw;margin-bottom:.4cqw}
+.s-card span{display:inline-block;margin-top:.6cqw;font-size:.8cqw;font-weight:700;color:#0B6E4F;background:#E3F4EC;border-radius:2cqw;padding:.2cqw .7cqw}
+.s-ak{height:100%;background:linear-gradient(170deg,#2A0E54,#4B1F8F);padding:2cqw 1.6cqw;color:#fff}
+.s-ak .t{font-size:.9cqw;opacity:.75}
+.s-ak .h{font-size:1.9cqw;font-weight:800;letter-spacing:-.02em;margin-bottom:1.4cqw}
+.s-ak .k{border-radius:.9cqw;padding:1cqw 1.1cqw;margin-bottom:.8cqw}
+.s-ak .k small{display:block;font-size:.8cqw;opacity:.85}
+.s-ak .k strong{font-size:1.5cqw}
+.s-ak .k1{background:rgba(255,255,255,.14)}.s-ak .k2{background:#C0392B}.s-ak .k3{background:#1E7A4F}
+.s-ak .bars{display:flex;align-items:flex-end;gap:.6cqw;height:8cqw;margin-top:1.4cqw;border-bottom:1px solid rgba(255,255,255,.25)}
+.s-ak .bars div{flex:1;border-radius:.4cqw .4cqw 0 0;background:linear-gradient(180deg,#C6EC5A,#7DB321)}
+.s-as{padding:4.6cqw 1.3cqw 1.3cqw}
+.s-as .prog{display:flex;gap:.3cqw;margin-bottom:1.2cqw}
+.s-as .prog i{flex:1;height:.3cqw;border-radius:.2cqw;background:#D6E2F3}
+.s-as .prog i.on{background:#1F4E8C}
+.s-as .st{font-size:.75cqw;color:#1F4E8C;font-weight:700}
+.s-as .h{font-size:1.35cqw;font-weight:800;color:#10223F;margin:.3cqw 0 1.1cqw;line-height:1.15}
+.s-as .f small{display:block;font-size:.7cqw;color:#6b7280;margin-bottom:.25cqw}
+.s-as .f div{height:2.2cqw;border:1px solid #D6E2F3;border-radius:.6cqw;margin-bottom:.8cqw}
+.s-as .cta{margin-top:1.2cqw;background:#1F4E8C;color:#fff;text-align:center;border-radius:.8cqw;padding:.8cqw;font-size:.85cqw;font-weight:700}
+
+/* Section rhythm */
+.sec{padding:110px 0}
+.sec-head{text-align:center;margin-bottom:56px}
+.sec-head h2{font-size:clamp(36px,5.4vw,60px);font-weight:800}
+.sec-head p{margin:16px auto 0;font-size:21px;color:var(--grey);max-width:40ch}
+.dark{background:var(--navy);color:#fff}
+.dark .sec-head p{color:rgba(255,255,255,.7)}
+.light{background:var(--light)}
+
+/* Product tiles */
+.products{padding:12px 0 0}
+.tile{overflow:hidden;padding:64px 22px 0;text-align:center;margin-bottom:12px}
+.tile + .tile{margin-top:0}
+.tile .brandlogo{height:44px;width:auto;margin:0 auto 18px}
+.t-fl .brandlogo{height:76px}
+.t-as .brandlogo{height:58px;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,.18)}
+.t-ak .brandlogo{height:120px;border-radius:24px;box-shadow:0 14px 34px -14px rgba(15,45,92,.45)}
+.wordmark{display:inline-block;font-weight:800;font-size:22px;letter-spacing:-.02em;margin-bottom:18px}
+.tile h3{font-size:clamp(34px,4.8vw,56px);font-weight:800;max-width:16ch;margin:0 auto}
+.tile .lead{margin:14px auto 0;font-size:21px;max-width:40ch;opacity:.8}
+.tile .ctas{margin-top:22px}
+.tile-stats{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:28px}
+.tile-stats div{font-size:14px;opacity:.75}
+.tile-stats strong{display:block;font-size:30px;font-weight:800;opacity:1;letter-spacing:-.02em}
+.stage{margin:52px auto 0;max-width:880px;position:relative}
+.t-fl{background:linear-gradient(180deg,#E4F3F9 0%,#FFFFFF 70%)}
+.t-fl .wordmark{color:var(--fl)}
+.t-as{background:radial-gradient(700px 420px at 50% 100%,rgba(232,176,74,.38),transparent 70%),linear-gradient(160deg,#07392D,#0C4F3E 55%,#052A21);color:#fff}
+.t-as .wordmark{color:#fff}
+.t-as .pill{background:#E8B04A;color:#062B22}
+.t-as .pill.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7)}
+.t-ak{background:linear-gradient(180deg,#E8EEF8 0%,#FFFFFF 75%)}
+.t-ak .wordmark{color:var(--ak)}
+.tagline{font-size:18px;font-weight:700;letter-spacing:.02em;opacity:.9;margin-bottom:6px}
+
+/* Snapshot frames (real screenshot overlays the CSS mock when present) */
+.frame{position:relative;background:#fff;border-radius:14px 14px 0 0;box-shadow:0 30px 80px -30px rgba(7,21,42,.45);overflow:hidden;text-align:left}
+.frame .snap{width:100%;height:auto}
+.frame:has(.snap) .mock,.frame:has(.snap) .xl{display:none}
+.frame.tall{max-height:680px;-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
+.ak-frame{width:min(560px,100%);flex:none}
+.bar{display:flex;align-items:center;gap:6px;padding:12px 14px;background:#EDEDF0;border-bottom:1px solid #DDD}
+.bar i{width:11px;height:11px;border-radius:50%;background:#FF5F57}
+.bar i:nth-child(2){background:#FEBC2E}.bar i:nth-child(3){background:#28C840}
+.bar span{margin-left:12px;flex:1;max-width:340px;background:#fff;border-radius:6px;font-size:12px;color:#777;padding:4px 10px}
+.mock{padding:26px;min-height:340px;font-size:13px}
+.m-search{display:flex;gap:10px}
+.m-input{flex:1;border:1.5px solid #CFE6DC;border-radius:10px;padding:12px 14px;color:#6b7c75}
+.m-btn{background:var(--fl);color:#fff;border-radius:10px;padding:12px 18px;font-weight:700}
+.m-chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 20px}
+.m-chips span{background:#EEF7F3;color:var(--fl);border-radius:980px;padding:5px 12px;font-weight:600}
+.m-row{display:flex;align-items:center;gap:14px;padding:14px 0;border-top:1px solid #EEE}
+.m-av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#BFE3D5,#7CC4A7);flex:none}
+.m-lines{flex:1}
+.m-lines b{display:block;height:10px;width:46%;background:#D9E2DE;border-radius:5px;margin-bottom:8px}
+.m-lines em{display:block;height:8px;width:70%;background:#ECF0EE;border-radius:4px}
+.m-badge{font-size:11px;font-weight:700;color:var(--fl);background:#E3F4EC;border-radius:980px;padding:4px 10px}
+.xl{display:grid;grid-template-columns:150px 1fr;min-height:360px}
+.xl-side{background:#F7F5FB;border-right:1px solid #E6E1F0;padding:16px 0}
+.xl-side div{padding:8px 16px;color:#5a4f70;font-weight:500}
+.xl-side .on{background:#EDE4FA;color:#4B1F8F;font-weight:700;border-left:3px solid #7A3FC0}
+.xl-main{padding:22px}
+.xl-title{font-weight:800;font-size:18px;color:#2A0E54;margin-bottom:16px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.kpi{border-radius:12px;padding:14px;color:#fff}
+.kpi small{display:block;opacity:.85;font-size:11px}
+.kpi strong{font-size:19px;letter-spacing:-.01em}
+.k1{background:#4B1F8F}.k2{background:#C0392B}.k3{background:#1E7A4F}
+.bars{display:flex;align-items:flex-end;gap:12px;height:120px;margin-top:22px;padding:0 4px;border-bottom:1px solid #EEE}
+.bars div{flex:1;border-radius:6px 6px 0 0;background:linear-gradient(180deg,#A6D12E,#6FA31C)}
+.bars-lbl{display:flex;gap:12px;padding:6px 4px 0;color:#888;font-size:11px}
+.bars-lbl span{flex:1;text-align:center}
+.phone-stage{display:flex;justify-content:center;gap:28px;align-items:flex-end}
+.doc{width:300px;height:390px;background:#fff;border-radius:6px 6px 0 0;box-shadow:0 30px 80px -30px rgba(7,21,42,.45);padding:30px 26px;text-align:left}
+.doc h4{font-size:13px;text-align:center;letter-spacing:.04em;margin-bottom:6px;color:#10223F}
+.doc p{font-size:10px;color:#888;text-align:center;margin-bottom:18px}
+.doc i{display:block;height:6px;border-radius:3px;background:#E7ECF3;margin-bottom:9px}
+.doc i:nth-child(odd){width:88%}
+.doc .sig{display:flex;justify-content:space-between;margin-top:30px}
+.doc .sig span{width:40%;border-top:1.5px solid #10223F;font-size:9px;padding-top:4px;color:#555}
+.next{margin:12px 0 0;border-radius:0;background:var(--light);padding:44px 40px;text-align:center}
+.next h3{font-size:28px;font-weight:800}
+.next p{margin:10px auto 0;color:var(--grey);max-width:52ch}
+.next .names{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:20px}
+.next .names span{padding:8px 16px;border-radius:980px;background:#fff;border:1px solid var(--line);font-weight:600;font-size:15px}
+
+/* Training */
+.series{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.course{background:var(--navy-2);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.08)}
+.course img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.course-body{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1}
+.level{font-size:14px;font-weight:700}
+.lv1{color:var(--cyan)}.lv2{color:var(--lime)}.lv3{color:var(--gold)}
+.course h3{font-size:22px;font-weight:800;margin-top:6px;letter-spacing:-.015em;line-height:1.2}
+.course .when{margin-top:12px;color:rgba(255,255,255,.75);font-size:15px}
+.course .topics{margin-top:12px;color:rgba(255,255,255,.6);font-size:14px}
+.course-foot{margin-top:auto;padding-top:22px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.fee{font-size:26px;font-weight:800;letter-spacing:-.02em}
+.fee small{display:block;font-size:12px;font-weight:500;color:rgba(255,255,255,.55);letter-spacing:0}
+.bonus{margin-top:30px;border-radius:24px;padding:34px 36px;background:linear-gradient(120deg,rgba(43,181,232,.18),rgba(166,209,46,.14));border:1px solid rgba(255,255,255,.12);display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:center}
+.bonus h3{font-size:26px;font-weight:800}
+.bonus p{margin-top:8px;color:rgba(255,255,255,.72)}
+.bonus ul{list-style:none;display:grid;gap:10px}
+.bonus li{background:rgba(255,255,255,.07);border-radius:14px;padding:12px 16px;font-weight:600}
+.bonus li span{display:block;font-size:13px;font-weight:500;color:rgba(255,255,255,.6)}
+.leaders{text-align:center;margin-top:36px;color:rgba(255,255,255,.7)}
+.leaders strong{color:#fff}
+
+/* Services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc div{background:#fff;border-radius:24px;padding:34px 30px}
+.svc h3{font-size:22px;font-weight:800}
+.svc p{margin-top:10px;color:var(--grey);font-size:16px}
+.svc .for{margin-top:14px;font-size:14px;font-weight:700;color:var(--blue)}
+
+/* About */
+.about-intro{max-width:760px;margin:0 auto;text-align:center;font-size:22px;color:var(--grey)}
+.people{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:56px}
+.person{background:var(--light);border-radius:28px;padding:40px 36px;display:grid;grid-template-columns:120px 1fr;gap:26px;align-items:start}
+.avatar{position:relative;width:120px;height:120px;border-radius:50%;overflow:hidden;background:linear-gradient(135deg,var(--cyan),var(--navy-2));color:#fff;display:grid;place-items:center;font-size:38px;font-weight:800}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.person h3{font-size:24px;font-weight:800}
+.person .role{margin-top:4px;color:var(--blue);font-weight:700;font-size:15px}
+.person ul{margin-top:16px;list-style:none;display:grid;gap:8px}
+.person li{padding-left:18px;position:relative;color:#424245;font-size:15.5px}
+.person li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--lime)}
+.company{display:flex;justify-content:center;flex-wrap:wrap;gap:34px;margin-top:44px;color:var(--grey);font-size:15px}
+.company strong{color:var(--ink)}
+
+/* Contact */
+.contact h2{font-size:clamp(36px,5.4vw,60px);font-weight:800}
+.contact .sub{margin:16px auto 0;font-size:21px;color:rgba(255,255,255,.72);max-width:38ch}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px;text-align:left}
+.contact-grid div{background:var(--navy-2);border-radius:22px;padding:28px;border:1px solid rgba(255,255,255,.08)}
+.contact-grid small{display:block;color:rgba(255,255,255,.55);font-size:13px;margin-bottom:6px}
+.contact-grid a,.contact-grid address{font-style:normal;font-weight:600;font-size:18px;text-decoration:none;color:#fff}
+.contact-grid a:hover{color:var(--cyan)}
+
+.contact{padding-bottom:0}
+.contact .skyline{margin-top:80px;height:clamp(140px,22vw,280px);background:url(images/kl-skyline.jpg) center bottom/cover no-repeat;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 45%);mask-image:linear-gradient(to bottom,transparent,#000 45%)}
+
+/* Footer */
+footer{background:var(--navy);color:rgba(255,255,255,.55);font-size:13px;padding:36px 0;border-top:1px solid rgba(255,255,255,.08)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px}
+footer img{height:28px;width:auto}
+footer nav{display:flex;gap:20px;flex-wrap:wrap}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+
+/* One orchestrated reveal on load */
+.hero h1,.hero .tag,.hero .sub,.hero .ctas,.lineup{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero .tag{animation-delay:.08s}.hero .sub{animation-delay:.14s}.hero .ctas{animation-delay:.2s}.lineup{animation-delay:.3s;animation-duration:1.1s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}html{scroll-behavior:auto}}
+
+/* Responsive */
+@media (max-width:980px){
+  .series,.svc,.contact-grid{grid-template-columns:1fr}
+  .people{grid-template-columns:1fr}
+  .bonus{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .nav ul li:not(:last-child){display:none}
+  .sec{padding:80px 0}
+  .hero{padding-top:48px}
+  .tile{padding:48px 18px 0}
+  .lineup{aspect-ratio:1060/700}
+  .laptop{left:0;width:84%}
+  .tablet{display:none}
+  .phone-d{right:0;width:26%}
+  .xl{grid-template-columns:1fr}
+  .xl-side{display:none}
+  .kpis{grid-template-columns:1fr}
+  .kpi strong{font-size:17px}
+  .doc{display:none}
+  .person{grid-template-columns:1fr;text-align:center;padding:32px 24px}
+  .avatar{margin:0 auto}
+  .person ul{text-align:left}
+  .mock{padding:18px}
+  .m-btn{display:none}
+}
+</style>
+<script>
+  // Product logo fallback: shows a text wordmark until the logo file is uploaded
+  function logoFallback(img){
+    var s=document.createElement('span');
+    s.className='wordmark';
+    s.textContent=img.alt;
+    img.replaceWith(s);
+  }
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" aria-label="Impact Analytix home"><img src="images/logo-impact-analytix.png" alt="Impact Analytix" width="110" height="30"></a>
+    <ul>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#training">Training</a></li>
+      <li><a href="#services">Compliance</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a class="pill" href="#contact">Contact us</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero center" aria-labelledby="hero-title">
+    <div class="wrap">
+      <h1 id="hero-title">Impact Analytix</h1>
+      <p class="tag">Legal and financial tools, built in Malaysia.</p>
+      <p class="sub">FindLawyer.my, AsetKoo and AkadSewa. Available now.</p>
+      <div class="ctas">
+        <a class="pill" href="#products">Explore products</a>
+        <a class="pill ghost" href="#training">View training</a>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="lineup" role="img" aria-label="FindLawyer.my on a laptop, AsetKoo on a tablet and AkadSewa on a phone">
+
+        <div class="dev tablet" aria-hidden="true">
+          <div class="body"><div class="scr">
+            <div class="s-ak">
+              <div class="t">AsetKoo</div>
+              <div class="h">Papan Pemuka</div>
+              <div class="k k1"><small>Jumlah aset</small><strong>RM 1,284,500</strong></div>
+              <div class="k k2"><small>Liabiliti</small><strong>RM 342,000</strong></div>
+              <div class="k k3"><small>Nilai bersih</small><strong>RM 942,500</strong></div>
+              <div class="bars"><div style="height:80%"></div><div style="height:55%"></div><div style="height:35%"></div><div style="height:64%"></div><div style="height:24%"></div></div>
+            </div>
+            <img class="snap" src="images/hero-asetkoo.jpg" alt="" onerror="this.remove()">
+          </div></div>
+        </div>
+
+        <div class="dev laptop" aria-hidden="true">
+          <div class="lid"><div class="scr">
+            <div class="s-bar"><i></i><i></i><i></i><span>findlawyer.my</span></div>
+            <div class="s-fl-hero">
+              <b>Find the right lawyer.</b>
+              <small>Verified Civil and Syariah lawyers in all 14 states</small>
+              <div class="s-search"><div>Divorce, tenancy dispute, faraid…</div><span>Search</span></div>
+            </div>
+            <div class="s-cards">
+              <div class="s-card"><div class="av"></div><b></b><em></em><em></em><span>Verified</span></div>
+              <div class="s-card"><div class="av"></div><b></b><em></em><em></em><span>Verified</span></div>
+              <div class="s-card"><div class="av"></div><b></b><em></em><em></em><span>Verified</span></div>
+            </div>
+            <img class="snap" src="images/hero-findlawyer.jpg" alt="" onerror="this.remove()">
+          </div></div>
+          <div class="base"></div>
+        </div>
+
+        <div class="dev phone-d" aria-hidden="true">
+          <div class="body"><div class="isl"></div><div class="scr">
+            <div class="s-as">
+              <div class="prog"><i class="on"></i><i class="on"></i><i></i><i></i></div>
+              <div class="st">Langkah 2 / 4</div>
+              <div class="h">Maklumat penyewa</div>
+              <div class="f"><small>Nama penuh</small><div></div></div>
+              <div class="f"><small>No. IC</small><div></div></div>
+              <div class="f"><small>Sewa bulanan</small><div></div></div>
+              <div class="f"><small>Tarikh mula</small><div></div></div>
+              <div class="cta">Seterusnya</div>
+            </div>
+            <img class="snap" src="images/hero-akadsewa.jpg" alt="" onerror="this.remove()">
+          </div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="products" aria-label="Our products">
+
+      <!-- FindLawyer.my -->
+      <article class="tile t-fl">
+        <img class="brandlogo" src="images/logo-findlawyer.png" alt="FindLawyer.my" onerror="logoFallback(this)">
+        <h3>The right lawyer, verified.</h3>
+        <p class="lead">Civil and Syariah lawyers across all 14 states, searchable by the matter you actually have.</p>
+        <div class="tile-stats">
+          <div><strong>14</strong>states</div>
+          <div><strong>39</strong>practice areas</div>
+          <div><strong>558</strong>legal matters</div>
+        </div>
+        <div class="ctas">
+          <a class="pill" href="https://findlawyer.my" target="_blank" rel="noopener">Find a lawyer</a>
+          <a class="pill ghost" href="https://findlawyer.my" target="_blank" rel="noopener">List your firm</a>
+        </div>
+        <div class="stage">
+          <div class="frame">
+            <div class="bar"><i></i><i></i><i></i><span>findlawyer.my</span></div>
+            <div class="mock" aria-hidden="true">
+              <div class="m-search"><div class="m-input">Search by legal matter, e.g. divorce, tenancy dispute</div><div class="m-btn">Search</div></div>
+              <div class="m-chips"><span>Family</span><span>Property</span><span>Syariah</span><span>Employment</span><span>Kuala Lumpur</span></div>
+              <div class="m-row"><div class="m-av"></div><div class="m-lines"><b></b><em></em></div><span class="m-badge">Verified</span></div>
+              <div class="m-row"><div class="m-av"></div><div class="m-lines"><b></b><em></em></div><span class="m-badge">Verified</span></div>
+              <div class="m-row"><div class="m-av"></div><div class="m-lines"><b></b><em></em></div><span class="m-badge">Verified</span></div>
+            </div>
+            <img class="snap" src="images/snap-findlawyer.jpg" alt="FindLawyer.my homepage with lawyer search by category and region" onerror="this.remove()">
+          </div>
+        </div>
+      </article>
+
+      <!-- AsetKoo -->
+      <article class="tile t-as">
+        <img class="brandlogo" src="images/logo-asetkoo.png" alt="AsetKoo" onerror="logoFallback(this)">
+        <p class="tagline">Susun. Simpan. Sedia.</p>
+        <h3>Everything your family needs to know. In one file.</h3>
+        <p class="lead">Record savings, property, investments, loans, documents and key contacts, so nothing is lost when it matters most.</p>
+        <div class="tile-stats">
+          <div><strong>RM29</strong>Lite</div>
+          <div><strong>RM49</strong>Full</div>
+          <div><strong>BM / EN</strong>bilingual</div>
+        </div>
+        <div class="ctas">
+          <a class="pill" href="https://findlawyer.my/shop" target="_blank" rel="noopener">Beli AsetKoo</a>
+          <a class="pill ghost" href="https://asetkoo.my" target="_blank" rel="noopener">Learn more</a>
+        </div>
+        <div class="stage">
+          <div class="frame tall">
+            <div class="bar"><i></i><i></i><i></i><span>AsetKoo.xlsx</span></div>
+            <div class="xl" aria-hidden="true">
+              <div class="xl-side">
+                <div class="on">Papan Pemuka</div><div>Aset Kewangan</div><div>Aset Fizikal</div><div>Liabiliti</div><div>Dokumen</div><div>Kenalan</div>
+              </div>
+              <div class="xl-main">
+                <div class="xl-title">Papan Pemuka</div>
+                <div class="kpis">
+                  <div class="kpi k1"><small>Jumlah aset</small><strong>RM 1,284,500</strong></div>
+                  <div class="kpi k2"><small>Liabiliti</small><strong>RM 342,000</strong></div>
+                  <div class="kpi k3"><small>Nilai bersih</small><strong>RM 942,500</strong></div>
+                </div>
+                <div class="bars"><div style="height:78%"></div><div style="height:52%"></div><div style="height:34%"></div><div style="height:61%"></div><div style="height:22%"></div></div>
+                <div class="bars-lbl"><span>Hartanah</span><span>Simpanan</span><span>Saham</span><span>EPF</span><span>Kenderaan</span></div>
+              </div>
+            </div>
+            <img class="snap" src="images/snap-asetkoo.jpg" alt="AsetKoo: apa yang ada di dalam kit, panduan harta pusaka dan 4 langkah untuk bermula" onerror="this.remove()">
+          </div>
+        </div>
+      </article>
+
+      <!-- AkadSewa -->
+      <article class="tile t-ak">
+        <img class="brandlogo" src="images/logo-akadsewa.png" alt="AkadSewa" onerror="logoFallback(this)">
+        <h3>A tenancy agreement in minutes.</h3>
+        <p class="lead">Fill in the details, pay RM25, and download a complete Malaysian tenancy agreement ready to sign.</p>
+        <div class="tile-stats">
+          <div><strong>RM25</strong>per agreement</div>
+          <div><strong>PDF</strong>instant download</div>
+        </div>
+        <div class="ctas">
+          <a class="pill" href="https://akadsewa.my" target="_blank" rel="noopener">Buat perjanjian sewa</a>
+        </div>
+        <div class="stage phone-stage">
+          <div class="frame ak-frame">
+            <div class="bar"><i></i><i></i><i></i><span>akadsewa.my</span></div>
+            <img class="snap" src="images/snap-akadsewa.jpg" alt="AkadSewa: pilih peranan pemilik atau penyewa dan ikut proses 6 langkah" onerror="this.remove()">
+          </div>
+          <div class="doc" aria-hidden="true">
+            <h4>PERJANJIAN SEWA</h4>
+            <p>Tenancy Agreement</p>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <div class="sig"><span>Tuan rumah</span><span>Penyewa</span></div>
+          </div>
+        </div>
+      </article>
+
+      <div class="next">
+        <h3>Coming next.</h3>
+        <p>The same fill-in-and-download approach, extended to more everyday agreements for Malaysian SMEs and individuals.</p>
+        <div class="names"><span>AkadServis</span><span>AkadSewaKereta</span></div>
+      </div>
+  </section>
+
+  <!-- TRAINING -->
+  <section id="training" class="sec dark" aria-labelledby="training-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="training-title">Islamic Finance Legal Documentation Series.</h2>
+        <p>Three levels, three days in Kuala Lumpur. Built for lawyers who draft and review Islamic financing documents.</p>
+      </div>
+
+      <div class="series">
+        <article class="course">
+          <img src="images/training-foundation.jpg" alt="Essentials of Islamic Finance Legal Documentation, 17 November 2026">
+          <div class="course-body">
+            <span class="level lv1">Foundation level</span>
+            <h3>Essentials of Islamic Finance Legal Documentation</h3>
+            <p class="when">Tuesday, 17 November 2026, Kuala Lumpur</p>
+            <p class="topics">Contracts, documentation and the regulatory framework.</p>
+            <div class="course-foot">
+              <div class="fee">RM1,400<small>per participant</small></div>
+              <a class="pill" href="https://wa.me/60162212225?text=Saya%20ingin%20daftar%20Foundation%3A%20Essentials%20of%20Islamic%20Finance%20Legal%20Documentation%20(17%20Nov%202026)" target="_blank" rel="noopener">Register</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="course">
+          <img src="images/training-intermediate.jpg" alt="Structuring and Drafting Islamic Finance Documents, 18 November 2026">
+          <div class="course-body">
+            <span class="level lv2">Intermediate level</span>
+            <h3>Structuring &amp; Drafting Islamic Finance Documents: A Hands-On Guide</h3>
+            <p class="when">Wednesday, 18 November 2026, Kuala Lumpur</p>
+            <p class="topics">Murabahah, Tawarruq, Ijarah and Musharakah Mutanaqisah.</p>
+            <div class="course-foot">
+              <div class="fee">RM1,600<small>per participant</small></div>
+              <a class="pill" href="https://wa.me/60162212225?text=Saya%20ingin%20daftar%20Intermediate%3A%20Structuring%20%26%20Drafting%20Islamic%20Finance%20Documents%20(18%20Nov%202026)" target="_blank" rel="noopener">Register</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="course">
+          <img src="images/training-advanced.jpg" alt="Alternative Financing Structures: Beyond Tawarruq, 26 November 2026">
+          <div class="course-body">
+            <span class="level lv3">Advanced level</span>
+            <h3>Alternative Financing Structures: Beyond Tawarruq</h3>
+            <p class="when">Thursday, 26 November 2026, Kuala Lumpur</p>
+            <p class="topics">Musyarakah, Mudharabah, IMBT, AITAB, Istisna' and Salam.</p>
+            <div class="course-foot">
+              <div class="fee">RM1,800<small>per participant</small></div>
+              <a class="pill" href="https://wa.me/60162212225?text=Saya%20ingin%20daftar%20Advanced%3A%20Alternative%20Financing%20Structures%20(26%20Nov%202026)" target="_blank" rel="noopener">Register</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="bonus">
+        <div>
+          <h3>Every delegate takes home more.</h3>
+          <p>Register for any course in the series and receive our product bundle, free.</p>
+        </div>
+        <ul>
+          <li>3 months FindLawyer.my listing<span>Get found by clients looking for your practice area</span></li>
+          <li>1 AkadSewa agreement<span>A complete tenancy agreement, ready to sign</span></li>
+          <li>1 AsetKoo workbook<span>The family asset organiser, full edition</span></li>
+        </ul>
+      </div>
+
+      <p class="leaders">Course leaders: <strong>Ahmad Lutfi Abdull Mutalip</strong> and <strong>Farhah Hayati Mamat</strong>, Azmi &amp; Associates.</p>
+    </div>
+  </section>
+
+  <!-- COMPLIANCE & ADVISORY -->
+  <section id="services" class="sec light" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="services-title">Compliance and advisory.</h2>
+        <p>Hands-on help with the obligations regulators now expect firms to meet.</p>
+      </div>
+      <div class="svc">
+        <div>
+          <h3>AML/CFT compliance audit</h3>
+          <p>An on-site review of your firm's AMLA controls. We sample client files, interview staff at every level and give you a written report of gaps and fixes.</p>
+          <p class="for">For law firms</p>
+        </div>
+        <div>
+          <h3>AMLA training</h3>
+          <p>Practical sessions on meeting Bank Negara Malaysia's AML/CFT requirements, from half-day online classes to full-day programmes.</p>
+          <p class="for">For lawyers, negotiators, company secretaries, accountants and moneylenders</p>
+        </div>
+        <div>
+          <h3>Financial modelling and advisory</h3>
+          <p>Financial models, business plans and investor materials prepared by a Chartered Accountant, for raising funds or planning a new venture.</p>
+          <p class="for">For SMEs, cooperatives and growing companies</p>
+        </div>
+      </div>
+      <div class="ctas"><a class="pill" href="#contact">Ask about an audit or training</a></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="sec" aria-labelledby="about-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="about-title">About us.</h2>
+      </div>
+      <p class="about-intro">Impact Analytix was incorporated in 2009 to bring legal expertise and financial rigour to problems ordinary Malaysians face every day. It is led by a lawyer and Shariah advisor working alongside a Chartered Accountant.</p>
+
+      <div class="people">
+        <article class="person">
+          <div class="avatar">AL<img src="images/lutfi.jpg" alt="Ahmad Lutfi Abdull Mutalip" onerror="this.remove()"></div>
+          <div>
+            <h3>Ahmad Lutfi Abdull Mutalip</h3>
+            <p class="role">Founder, Director and Chief Executive Officer</p>
+            <ul>
+              <li>Managing Partner, Azmi &amp; Associates</li>
+              <li>Member, Shariah Advisory Committee, MBSB Bank</li>
+              <li>Shariah Panel member, MERCY Malaysia</li>
+              <li>Arbitrator, Asian International Arbitration Centre (AIAC)</li>
+              <li>Host of the "Kes Ditutup" podcast</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="person">
+          <div class="avatar">AR<img src="images/razzak.jpg" alt="Abdul Razzak Abdull Mutalip" onerror="this.remove()"></div>
+          <div>
+            <h3>Abdul Razzak Abdull Mutalip</h3>
+            <p class="role">Co-Founder and Director, CFO and CMO</p>
+            <ul>
+              <li>Chartered Accountant, Malaysian Institute of Accountants</li>
+              <li>Formerly with PETRONAS and MISC Berhad</li>
+              <li>Background in financial modelling and corporate advisory</li>
+              <li>Leads finance, operations and go-to-market for the product portfolio</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <div class="company">
+        <span><strong>Impact Analytix Sdn Bhd</strong></span>
+        <span>Company No. <strong>200901037283</strong></span>
+        <span>Incorporated <strong>2009</strong></span>
+        <span>Setapak, <strong>Kuala Lumpur</strong></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="sec dark contact center" aria-labelledby="contact-title">
+    <div class="wrap">
+      <h2 id="contact-title">Let's talk.</h2>
+      <p class="sub">Training registrations, compliance audits or questions about our products. We usually reply within one working day.</p>
+      <div class="ctas">
+        <a class="pill" href="https://wa.me/60162212225" target="_blank" rel="noopener">WhatsApp us</a>
+        <a class="pill ghost" href="mailto:admin@findlawyer.my?subject=Enquiry%20via%20impactanalytix.my">Email us</a>
+      </div>
+      <div class="contact-grid">
+        <div><small>Email</small><a href="mailto:admin@findlawyer.my">admin@findlawyer.my</a></div>
+        <div><small>Phone and WhatsApp</small><a href="tel:+60162212225">016-221 2225</a></div>
+        <div><small>Office</small><address><a href="https://www.google.com/maps/search/?api=1&query=22A+Jalan+7%2F23E+Taman+Danau+Kota+53300+Kuala+Lumpur" target="_blank" rel="noopener">No. 22A Jalan 7/23E, Taman Danau Kota, Setapak, 53300 Kuala Lumpur</a></address></div>
+      </div>
+    </div>
+    <div class="skyline" role="img" aria-label="Kuala Lumpur skyline at dusk"></div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="images/logo-impact-analytix.png" alt="Impact Analytix" width="103" height="28">
+    <span>&copy; <span id="year">2026</span> Impact Analytix Sdn Bhd (200901037283). All rights reserved.</span>
+    <nav aria-label="Our websites">
+      <a href="https://findlawyer.my" target="_blank" rel="noopener">FindLawyer.my</a>
+      <a href="https://asetkoo.my" target="_blank" rel="noopener">AsetKoo</a>
+      <a href="https://akadsewa.my" target="_blank" rel="noopener">AkadSewa</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
