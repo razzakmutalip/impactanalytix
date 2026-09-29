@@ -233,6 +233,15 @@ h1,h2,h3{letter-spacing:-.025em;line-height:1.07}
 .bonus li span{display:block;font-size:13px;font-weight:500;color:rgba(255,255,255,.6)}
 .leaders{text-align:center;margin-top:36px;color:rgba(255,255,255,.7)}
 .leaders strong{color:#fff}
+.reels{margin-top:64px}
+.reels-head{text-align:center}
+.reels-head h3{font-size:clamp(26px,3vw,34px);font-weight:800}
+.reels-head p{margin:8px auto 0;color:rgba(255,255,255,.7);max-width:44ch}
+.reel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:32px auto 0;max-width:880px}
+.reel{background:#000;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.1)}
+.reel video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;background:#000}
+.reel figcaption{padding:14px 18px 16px;font-size:15px;font-weight:600;color:rgba(255,255,255,.85)}
+.reel figcaption span{display:block;font-size:13px;font-weight:700}
 
 /* Services */
 .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -286,6 +295,8 @@ footer a:hover{color:#fff}
   .series,.svc,.contact-grid{grid-template-columns:1fr}
   .people{grid-template-columns:1fr}
   .bonus{grid-template-columns:1fr}
+  .reel-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(240px,70%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+  .reel{scroll-snap-align:center}
 }
 @media (max-width:760px){
   .nav ul li:not(:last-child){display:none}
@@ -446,7 +457,7 @@ footer a:hover{color:#fff}
           <div><strong>BM / EN</strong>bilingual</div>
         </div>
         <div class="ctas">
-          <a class="pill" href="https://findlawyer.my/shop" target="_blank" rel="noopener">Beli AsetKoo</a>
+          <a class="pill" href="https://shopee.com.my/AsetKoo-Pengurusan-Rekod-Aset-Liabiliti-Legasi-Digital-Akses-Seumur-Hidup-Sekali-Bayaran-RM49-i.1891417497.43732644969" target="_blank" rel="noopener">Buy AsetKoo</a>
           <a class="pill ghost" href="https://asetkoo.my" target="_blank" rel="noopener">Learn more</a>
         </div>
         <div class="stage">
@@ -482,7 +493,7 @@ footer a:hover{color:#fff}
           <div><strong>PDF</strong>instant download</div>
         </div>
         <div class="ctas">
-          <a class="pill" href="https://akadsewa.my" target="_blank" rel="noopener">Buat perjanjian sewa</a>
+          <a class="pill" href="https://akadsewa.my" target="_blank" rel="noopener">Create a tenancy agreement</a>
         </div>
         <div class="stage phone-stage">
           <div class="frame ak-frame">
@@ -557,6 +568,27 @@ footer a:hover{color:#fff}
         </article>
       </div>
 
+      <div class="reels">
+        <div class="reels-head">
+          <h3>Hear it in 15 seconds.</h3>
+          <p>A quick introduction to each level of the series. Tap to play with sound.</p>
+        </div>
+        <div class="reel-grid">
+          <figure class="reel">
+            <video src="video-foundation.mp4" poster="poster-foundation.jpg" controls playsinline preload="none"></video>
+            <figcaption><span class="lv1">Foundation, 17 Nov</span>Essentials of Islamic Finance Legal Documentation</figcaption>
+          </figure>
+          <figure class="reel">
+            <video src="video-intermediate.mp4" poster="poster-intermediate.jpg" controls playsinline preload="none"></video>
+            <figcaption><span class="lv2">Intermediate, 18 Nov</span>Structuring &amp; Drafting Islamic Finance Documents</figcaption>
+          </figure>
+          <figure class="reel">
+            <video src="video-advanced.mp4" poster="poster-advanced.jpg" controls playsinline preload="none"></video>
+            <figcaption><span class="lv3">Advanced, 26 Nov</span>Alternative Financing Structures: Beyond Tawarruq</figcaption>
+          </figure>
+        </div>
+      </div>
+
       <div class="bonus">
         <div>
           <h3>Every delegate takes home more.</h3>
@@ -620,7 +652,6 @@ footer a:hover{color:#fff}
               <li>Member, Shariah Advisory Committee, MBSB Bank</li>
               <li>Shariah Panel member, MERCY Malaysia</li>
               <li>Arbitrator, Asian International Arbitration Centre (AIAC)</li>
-              <li>Host of the "Kes Ditutup" podcast</li>
             </ul>
           </div>
         </article>
@@ -683,6 +714,12 @@ footer a:hover{color:#fff}
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+  // Play one training video at a time
+  document.querySelectorAll('.reel video').forEach(function(v){
+    v.addEventListener('play',function(){
+      document.querySelectorAll('.reel video').forEach(function(o){ if(o!==v) o.pause(); });
+    });
+  });
 </script>
 </body>
 </html>
