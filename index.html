@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Impact Analytix Sdn Bhd | Legal and financial technology, Kuala Lumpur</title>
-<meta name="description" content="Impact Analytix builds FindLawyer.my, AsetKoo and AkadSewa, and runs the Islamic Finance Legal Documentation Series in Kuala Lumpur.">
+<meta name="description" content="Impact Analytix builds FindLawyer.my, AsetKoo and AkadSewa, and runs the Islamic Finance Legal Documentation Series and AMLA training for law firms in Kuala Lumpur.">
 <meta property="og:title" content="Impact Analytix Sdn Bhd">
 <meta property="og:description" content="Legal and financial tools, built in Malaysia. Products, Islamic finance training and compliance advisory.">
 <meta property="og:type" content="website">
@@ -141,7 +141,7 @@ h1,h2,h3{letter-spacing:-.025em;line-height:1.07}
 .tile + .tile{margin-top:0}
 .tile .brandlogo{height:44px;width:auto;margin:0 auto 18px}
 .t-fl .brandlogo{height:76px}
-.t-as .brandlogo{height:58px;border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,.18)}
+.t-as .brandlogo{height:104px;background:#fff;padding:12px 18px;border-radius:20px;box-shadow:0 18px 40px -18px rgba(0,0,0,.55)}
 .t-ak .brandlogo{height:120px;border-radius:24px;box-shadow:0 14px 34px -14px rgba(15,45,92,.45)}
 .wordmark{display:inline-block;font-weight:800;font-size:22px;letter-spacing:-.02em;margin-bottom:18px}
 .tile h3{font-size:clamp(34px,4.8vw,56px);font-weight:800;max-width:16ch;margin:0 auto}
@@ -243,6 +243,25 @@ h1,h2,h3{letter-spacing:-.025em;line-height:1.07}
 .reel figcaption{padding:14px 18px 16px;font-size:15px;font-weight:600;color:rgba(255,255,255,.85)}
 .reel figcaption span{display:block;font-size:13px;font-weight:700}
 
+/* AMLA training */
+.amla{background:radial-gradient(900px 520px at 12% 18%,rgba(94,224,208,.16),transparent 70%),linear-gradient(160deg,#04262B,#073A40 55%,#03191D);color:#fff}
+.amla-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:52px;align-items:center}
+.amla-banner{border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.1);box-shadow:0 40px 90px -40px rgba(0,0,0,.75)}
+.amla-banner img{width:100%;height:auto;aspect-ratio:1448/1086;object-fit:cover}
+.amla .kicker{color:#5EE0D0;font-weight:700;font-size:15px}
+.amla h2{font-size:clamp(34px,4.6vw,52px);font-weight:800;margin-top:8px}
+.amla .lead{margin-top:14px;font-size:19px;color:rgba(255,255,255,.75);max-width:42ch}
+.amla-laws{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.amla-laws li{border:1px solid rgba(94,224,208,.45);color:#BFF3EC;border-radius:980px;padding:6px 14px;font-size:14px;font-weight:600}
+.amla-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+.amla-facts div{background:rgba(255,255,255,.07);border-radius:16px;padding:14px 16px;font-size:13px;color:rgba(255,255,255,.6)}
+.amla-facts strong{display:block;font-size:19px;color:#fff;letter-spacing:-.01em}
+.amla .ctas{justify-content:flex-start}
+.amla .pill{background:#5EE0D0;color:#04262B}
+.amla .pill.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7)}
+.amla-leaders{margin-top:22px;font-size:15px;color:rgba(255,255,255,.7)}
+.amla-leaders strong{color:#fff}
+
 /* Services */
 .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .svc div{background:#fff;border-radius:24px;padding:34px 30px}
@@ -295,6 +314,7 @@ footer a:hover{color:#fff}
   .series,.svc,.contact-grid{grid-template-columns:1fr}
   .people{grid-template-columns:1fr}
   .bonus{grid-template-columns:1fr}
+  .amla-grid{grid-template-columns:1fr;gap:36px}
   .reel-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(240px,70%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
   .reel{scroll-snap-align:center}
 }
@@ -303,6 +323,7 @@ footer a:hover{color:#fff}
   .sec{padding:80px 0}
   .hero{padding-top:48px}
   .tile{padding:48px 18px 0}
+  .t-as .brandlogo{height:80px;padding:9px 14px;border-radius:16px}
   .lineup{aspect-ratio:1060/700}
   .laptop{left:0;width:84%}
   .tablet{display:none}
@@ -316,6 +337,7 @@ footer a:hover{color:#fff}
   .avatar{margin:0 auto}
   .person ul{text-align:left}
   .mock{padding:18px}
+  .amla-facts{grid-template-columns:1fr}
   .m-btn{display:none}
 }
 </style>
@@ -337,6 +359,7 @@ footer a:hover{color:#fff}
     <ul>
       <li><a href="#products">Products</a></li>
       <li><a href="#training">Training</a></li>
+      <li><a href="#amla">AMLA</a></li>
       <li><a href="#services">Compliance</a></li>
       <li><a href="#about">About</a></li>
       <li><a class="pill" href="#contact">Contact us</a></li>
@@ -447,7 +470,7 @@ footer a:hover{color:#fff}
 
       <!-- AsetKoo -->
       <article class="tile t-as">
-        <img class="brandlogo" src="logo-asetkoo.png" alt="AsetKoo" onerror="logoFallback(this)">
+        <img class="brandlogo" src="logo-asetkoo.png" alt="AsetKoo" width="1367" height="493" onerror="logoFallback(this)">
         <p class="tagline">Susun. Simpan. Sedia.</p>
         <h3>Everything your family needs to know. In one file.</h3>
         <p class="lead">Record savings, property, investments, loans, documents and key contacts, so nothing is lost when it matters most.</p>
@@ -606,6 +629,35 @@ footer a:hover{color:#fff}
     </div>
   </section>
 
+  <!-- AMLA TRAINING -->
+  <section id="amla" class="sec amla" aria-labelledby="amla-title">
+    <div class="wrap amla-grid">
+      <div class="amla-banner">
+        <img src="AMLA-Training-Series-Banner.png" alt="AMLA Training for Law Firms: Complying with BNM Requirements. One-day workshop, Kuala Lumpur, date to be confirmed" width="1448" height="1086" loading="lazy">
+      </div>
+      <div>
+        <p class="kicker">AML/CFT Compliance Training Series</p>
+        <h2 id="amla-title">AMLA Training for Law Firms.</h2>
+        <p class="lead">A one-day workshop on complying with Bank Negara Malaysia's AML/CFT requirements: what the law now expects of your firm, and how to show you meet it.</p>
+        <ul class="amla-laws" aria-label="Laws and guidelines covered">
+          <li>AMLA 2001</li>
+          <li>AMLA (Amendment) Act 2025</li>
+          <li>BNM Policy Document</li>
+        </ul>
+        <div class="amla-facts">
+          <div><strong>One day</strong>6.5 lecture hours</div>
+          <div><strong>RM1,800</strong>per participant</div>
+          <div><strong>Kuala Lumpur</strong>Date to be confirmed</div>
+        </div>
+        <div class="ctas">
+          <a class="pill" href="https://findlawyer.my/listing/amla-training-for-law-firms-complying-with-bank-negara-malaysia-requirements/" target="_blank" rel="noopener">Register</a>
+          <a class="pill ghost" href="mailto:admin@findlawyer.my?subject=AMLA%20Training%20for%20Law%20Firms">Email us</a>
+        </div>
+        <p class="amla-leaders">Course leaders: <strong>Dato' Mohamad Ezri Abdul Wahab</strong> and <strong>Mr Babu Raj</strong>.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- COMPLIANCE & ADVISORY -->
   <section id="services" class="sec light" aria-labelledby="services-title">
     <div class="wrap">
@@ -623,6 +675,7 @@ footer a:hover{color:#fff}
           <h3>AMLA training</h3>
           <p>Practical sessions on meeting Bank Negara Malaysia's AML/CFT requirements, from half-day online classes to full-day programmes.</p>
           <p class="for">For lawyers, negotiators, company secretaries, accountants and moneylenders</p>
+          <p><a class="link" href="#amla">See the law firm workshop</a></p>
         </div>
         <div>
           <h3>Financial modelling and advisory</h3>
