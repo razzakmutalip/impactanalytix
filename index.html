@@ -159,6 +159,12 @@ h1,h2,h3{letter-spacing:-.025em;line-height:1.07}
 .t-as .pill.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7)}
 .t-ak{background:linear-gradient(180deg,#E8EEF8 0%,#FFFFFF 75%)}
 .t-ak .wordmark{color:var(--ak)}
+.editions{display:grid;grid-template-columns:repeat(2,minmax(0,280px));gap:14px;justify-content:center;margin-top:28px;text-align:left}
+.edition{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:20px 22px;display:flex;flex-direction:column}
+.edition small{font-size:13px;font-weight:700;color:#E8B04A;letter-spacing:.02em}
+.edition strong{display:block;font-size:19px;font-weight:800;letter-spacing:-.01em;margin-top:4px}
+.edition p{font-size:14px;opacity:.7;margin:4px 0 16px}
+.edition .pill{margin-top:auto;align-self:flex-start;padding:9px 18px;font-size:15px}
 .tagline{font-size:18px;font-weight:700;letter-spacing:.02em;opacity:.9;margin-bottom:6px}
 
 /* Snapshot frames (real screenshot overlays the CSS mock when present) */
@@ -331,6 +337,7 @@ footer a:hover{color:#fff}
   .person ul{text-align:left}
   .mock{padding:18px}
   .amla-facts{grid-template-columns:1fr}
+  .editions{grid-template-columns:1fr}
   .m-btn{display:none}
 }
 </style>
@@ -467,14 +474,19 @@ footer a:hover{color:#fff}
         <p class="tagline">Susun. Simpan. Sedia.</p>
         <h3>Everything your family needs to know. In one file.</h3>
         <p class="lead">Record savings, property, investments, loans, documents and key contacts, so nothing is lost when it matters most.</p>
-        <div class="tile-stats">
-          <div><strong>RM29</strong>Lite</div>
-          <div><strong>RM49</strong>Full</div>
-          <div><strong>BM / EN</strong>bilingual</div>
-        </div>
-        <div class="ctas">
-          <a class="pill" href="https://shopee.com.my/AsetKoo-Pengurusan-Rekod-Aset-Liabiliti-Legasi-Digital-Akses-Seumur-Hidup-Sekali-Bayaran-RM49-i.1891417497.43732644969" target="_blank" rel="noopener">Buy AsetKoo</a>
-          <a class="pill ghost" href="https://asetkoo.my" target="_blank" rel="noopener">Learn more</a>
+        <div class="editions">
+          <div class="edition">
+            <small>Malaysia edition</small>
+            <strong>Bahasa Melayu, in RM</strong>
+            <p>Lite RM29 &middot; Full RM49</p>
+            <a class="pill" href="https://shopee.com.my/AsetKoo-Pengurusan-Rekod-Aset-Liabiliti-Legasi-Digital-Akses-Seumur-Hidup-Sekali-Bayaran-RM49-i.1891417497.43732644969" target="_blank" rel="noopener">Buy on Shopee</a>
+          </div>
+          <div class="edition">
+            <small>International edition</small>
+            <strong>English, choose your currency</strong>
+            <p>For users outside Malaysia</p>
+            <a class="pill ghost" href="https://www.etsy.com/listing/4601387915/personal-asset-tracker-excel-spreadsheet" target="_blank" rel="noopener">Buy on Etsy</a>
+          </div>
         </div>
         <div class="stage">
           <div class="frame tall">
@@ -681,7 +693,7 @@ footer a:hover{color:#fff}
           <div class="avatar">AL<img src="lutfi.jpg" alt="Ahmad Lutfi Abdull Mutalip" onerror="this.remove()"></div>
           <div>
             <h3>Ahmad Lutfi Abdull Mutalip</h3>
-            <p class="role">Founder, Director and Chief Executive Officer</p>
+            <p class="role">Founder and Director</p>
             <ul>
               <li>Managing Partner, Azmi &amp; Associates</li>
               <li>Member, Shariah Advisory Committee, MBSB Bank</li>
@@ -692,15 +704,15 @@ footer a:hover{color:#fff}
         </article>
 
         <article class="person">
-          <div class="avatar">AR<img src="razzak.jpg" alt="Abdul Razzak Abdull Mutalip" onerror="this.remove()"></div>
+          <div class="avatar">AR<img src="razzak.jpg" alt="Abdul Razzak Abdull Mutalip" style="object-position:center 20%" onerror="this.remove()"></div>
           <div>
             <h3>Abdul Razzak Abdull Mutalip</h3>
-            <p class="role">Co-Founder and Director, CFO and CMO</p>
+            <p class="role">Director and Chief Executive Officer</p>
             <ul>
               <li>Chartered Accountant, Malaysian Institute of Accountants</li>
               <li>Formerly with PETRONAS and MISC Berhad</li>
               <li>Background in financial modelling and corporate advisory</li>
-              <li>Leads finance, operations and go-to-market for the product portfolio</li>
+              <li>Leads strategy, finance, operations and go-to-market for the product portfolio</li>
             </ul>
           </div>
         </article>
@@ -741,7 +753,7 @@ footer a:hover{color:#fff}
     <span>&copy; <span id="year">2026</span> Impact Analytix Sdn Bhd (200901037283). All rights reserved.</span>
     <nav aria-label="Our websites">
       <a href="https://findlawyer.my" target="_blank" rel="noopener">FindLawyer.my</a>
-      <a href="https://asetkoo.my" target="_blank" rel="noopener">AsetKoo</a>
+      <a href="https://www.etsy.com/listing/4601387915/personal-asset-tracker-excel-spreadsheet" target="_blank" rel="noopener">AsetKoo</a>
       <a href="https://akadsewa.my" target="_blank" rel="noopener">AkadSewa</a>
     </nav>
   </div>
